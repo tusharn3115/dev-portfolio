@@ -33,6 +33,12 @@ body {
 }  
 
 
+.mask-tape {
+    mask-image: linear-gradient(to right, transparent 5%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, transparent 95%);
+}
+
+
+
 @layer utilities {
     .container {
         @apply lg:max-w-7xl
