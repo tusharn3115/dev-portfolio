@@ -84,7 +84,7 @@ export const HeroSection = () => {
         </div>
 
         <div className="max-w-[55rem] mx-auto">
-          <h1 className="text-4xl md:text-5xl font-semibold text-center mt-8 tracking-wide">
+          <h1 className="heading text-4xl md:text-5xl font-semibold text-center mt-8 tracking-wide">
             Elevating Digital Interactions with Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">

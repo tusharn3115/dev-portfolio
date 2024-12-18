@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <HeroSection />
+      <HeroSection  />
       <ProjectsSection />
     </div>
   );
