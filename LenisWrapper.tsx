@@ -7,7 +7,7 @@ export default function LenisWrapper({ children }: { children: React.ReactNode }
   useEffect(() => {
     // Initialize Lenis
     const lenis = new Lenis({
-      smooth: true,
+      // smooth: true,
       lerp: 0.1, // Adjust scrolling interpolation
     });
 
