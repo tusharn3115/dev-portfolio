@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-40 relative z-0 overflow-x-clip">
+    <div id="home" className="py-32 md:py-40 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 mask-gradient">
         <div
           className="absolute inset-0 -z-30 opacity-10"
