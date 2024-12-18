@@ -24,7 +24,7 @@ body {
     }
 
     .hero-ring {
-        @apply absolute inset-0 border-2 border-sky-600/10 shadow-[0_0_80px_inset] shadow-sky-600/10  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
+        @apply absolute inset-0 border-2 border-sky-600/15 shadow-[0_0_80px_inset] shadow-sky-600/15  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
     }
 }
 
