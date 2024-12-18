@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scrollbar-width: thin;
+}
+
+body {
+    /* font-family: "Rubik", sans-serif; */
+    font-family: "PP Mori";
+}
+
+@layer base {
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-200
+    }
+
+    .hero-ring {
+        @apply absolute inset-0 border-2 border-sky-600/10 shadow-[0_0_80px_inset] shadow-sky-600/10  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
+    }
+}
+
+.mask-gradient {
+    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1) 0.1%, rgba(0, 0, 0, 0.7) 10%, transparent);
+}  
