@@ -41,6 +41,10 @@ body {
     mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1) 80%, transparent 100%);
 }
 
+.mask-aboutCards {
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1) 80%, transparent 100%);
+}
+
 
 
 @layer utilities {

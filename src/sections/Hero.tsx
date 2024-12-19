@@ -89,9 +89,7 @@ export const HeroSection = () => {
             Elevating Digital Interactions with Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in turning designs into fully functional,
-            high-performance web applications. Let&apos;s talk about your next
-            project! 🚀
+          💻 I specialize in turning designs into fully functional, high-performance web applications. 🌟 Let's talk about your next project! 🚀
           </p>
         </div>
 

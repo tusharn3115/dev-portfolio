@@ -56,7 +56,7 @@ export const ProjectsSection = () => {
         <SectionHeader
           eyebrow="Real World Results"
           title="Highlighted Project Showcases"
-          description="I design and develop interactive projects focused on providing engaging, dynamic, and memorable user experiences."
+          description="🎨 I design and develop interactive projects focused on delivering engaging, dynamic, and unforgettable user experiences. 💻✨"
         />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {portfolioProjects.map((project) => (
