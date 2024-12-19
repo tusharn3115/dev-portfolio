@@ -34,7 +34,11 @@ body {
 
 
 .mask-tape {
-    mask-image: linear-gradient(to right, transparent 5%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, transparent 95%);
+    mask-image: linear-gradient(to right, transparent 3%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 87%, transparent 97%);
+}
+
+.mask-cards {
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1) 80%, transparent 100%);
 }
 
 
