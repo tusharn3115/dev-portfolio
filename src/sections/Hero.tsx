@@ -89,34 +89,44 @@ export const HeroSection = () => {
             Elevating Digital Interactions with Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-          💻 I specialize in turning designs into fully functional, high-performance web applications. 🌟 Let&apos;s talk about your next project! 🚀
+            💻 I specialize in turning designs into fully functional,
+            high-performance web applications. 🌟 Let&apos;s talk about your
+            next project! 🚀
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative z-10">
           {/* Button 1: Explore My Work */}
-          <Link href="/sections/Projects">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 500, damping: 10 }}
-              className="inline-flex items-center gap-2 border cursor-pointer border-white/15 px-6 h-12 rounded-xl z-10"
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.3)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 500, damping: 10 }}
+            className="inline-flex items-center gap-2 border cursor-pointer border-white/15 px-6 h-12 rounded-xl z-10"
+            onClick={() => {
+              const projectSection = document.getElementById("project");
+              if (projectSection) {
+                projectSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            <span className="font-semibold text-white">Explore my work</span>
+            <motion.div
+              whileHover={{ y: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <span className="font-semibold text-white">Explore my work</span>
-              <motion.div
-                whileHover={{ y: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <ArrowDown className="size-4" />
-              </motion.div>
-            </motion.button>
-          </Link>
+              <ArrowDown className="size-4" />
+            </motion.div>
+          </motion.button>
 
           {/* Button 2: Let's Connect */}
-          <Link href="https://x.com/tushxr05" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://x.com/tushxr05"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <motion.button
               whileHover={{
                 scale: 1.05,
