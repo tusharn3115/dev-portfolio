@@ -6,9 +6,10 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUp from "@/assets/icons/arrow-up-right.svg";
 import { motion } from "framer-motion";
-import GrainImage from "@/assets/images/grain.jpg";
+import GithubImg from "@/assets/icons/icon-github.svg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+
 
 const portfolioProjects = [
   {
@@ -21,6 +22,7 @@ const portfolioProjects = [
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://significo-iota.vercel.app/",
+    github: "https://github.com/tusharn3115/significo",
     image: Significo,
   },
   {
@@ -33,6 +35,7 @@ const portfolioProjects = [
       { title: "Increased brand awareness by 15%" },
     ],
     link: "https://rejouice-peach.vercel.app/",
+    github: "https://github.com/tusharn3115/REJOUICE",
     image: Rejouice,
   },
   {
@@ -45,6 +48,7 @@ const portfolioProjects = [
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://clinic-care-three.vercel.app/",
+    github: "https://github.com/tusharn3115/ClinicCare",
     image: ClinicCare,
   },
 ];
@@ -59,10 +63,13 @@ export const ProjectsSection = () => {
           description="🎨 I design and develop interactive projects focused on delivering engaging, dynamic, and unforgettable user experiences. 💻✨"
         />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, index) => (
             <Card
-              key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              key={index}
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{
+                top: `calc(55px + ${index * 40}px )`,
+              }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
@@ -78,7 +85,7 @@ export const ProjectsSection = () => {
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
                       <li
-                        key={project.title}
+                        key={result.title}
                         className="flex gap-2 text-sm md:text-base text-white/50"
                       >
                         <CheckCircleIcon className="size-5 md:size-6" />
@@ -89,6 +96,7 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
+                  <div className="flex flex-col mt-8 md:mt-12">
                   <motion.a href={project.link} target="_blank">
                     <motion.button
                       whileHover={{
@@ -102,7 +110,7 @@ export const ProjectsSection = () => {
                         stiffness: 400,
                         damping: 10,
                       }}
-                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8"
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2"
                     >
                       <span>Visit Live Site</span>
                       <motion.div
@@ -113,6 +121,33 @@ export const ProjectsSection = () => {
                       </motion.div>
                     </motion.button>
                   </motion.a>
+
+                  <motion.a href={project.github} target="_blank">
+                    <motion.button
+                      whileHover={{
+                        scale: 1.02,
+                        rotate: 2,
+                        boxShadow: "0px 4px 15px rgba(255, 255, 255, 0.3)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-4"
+                    >
+                      <span>Give a Star</span>
+                      <GithubImg className="size-6" />
+                      <motion.div
+                        whileHover={{ y: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <ArrowUp className="size-4" />
+                      </motion.div>
+                    </motion.button>
+                  </motion.a>
+                  </div>
                 </div>
 
                 <div className="relative">
