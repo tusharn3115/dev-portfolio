@@ -1,59 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 body {
-    font-family: "Inter";
-}   
-
-.heading {
-    font-family: "Merriweather";
+  font-family: "Inter";
 }
 
+.heading {
+  font-family: "Merriweather";
+}
 
 @layer base {
-    .nav-item {
-        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-200
-    }
+  .nav-item {
+    @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-200;
+  }
 
-    .hero-ring {
-        @apply absolute inset-0 border-2 border-sky-600/15 shadow-[0_0_80px_inset] shadow-sky-600/15  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full
-    }
+  .hero-ring {
+    @apply absolute inset-0 border-2 border-sky-600/15 shadow-[0_0_80px_inset] shadow-sky-600/15  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full;
+  }
 }
 
 .mask-gradient {
-    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1) 0.1%, rgba(0, 0, 0, 0.7) 10%, transparent);
-}  
-
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.1) 0.1%,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+}
 
 .mask-tape {
-    mask-image: linear-gradient(to right, transparent 3%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 87%, transparent 97%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 3%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 87%,
+    transparent 97%
+  );
 }
 
 .mask-cards {
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1) 80%, transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 1) 80%,
+    transparent 100%
+  );
 }
 
 .mask-aboutCards {
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1) 80%, transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 1) 80%,
+    transparent 100%
+  );
 }
 
-
+.mask-radial-center {
+  mask-image: radial-gradient(50% 50% at bottom center, black, transparent);
+}
 
 @layer utilities {
-    .container {
-        @apply lg:max-w-7xl
-    }
+  .container {
+    @apply lg:max-w-7xl;
+  }
 }
-
-
 
 /* lenis */
 [data-lenis-container] {
